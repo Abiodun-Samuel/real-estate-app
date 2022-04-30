@@ -28,7 +28,7 @@ const Property = ({
         w="320px"
         p="5"
         paddingTop="0px"
-        justifyContent="flex-start"
+        justifyContent="space-between"
         cursor="pointer"
       >
         <Box>
