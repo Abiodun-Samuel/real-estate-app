@@ -20,6 +20,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 300px;
-  padding: 30px;
+  min-height: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding: 30px; */
 }
