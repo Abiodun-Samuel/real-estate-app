@@ -37,15 +37,17 @@ const Hero = () => {
           flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
-          p="5"
-          m="auto"
-          width={350}
-          boxShadow="2xl"
+          p="3"
+          // marginTop="-35px"
+          marginBottom="25px"
+          marginX={"auto"}
+          maxWidth={350}
+          boxShadow="xl"
           textAlign="center"
           rounded="md"
           bg="white"
         >
-          <Box>
+          <Box height={100}>
             <Text
               fontSize="lg"
               fontWeight="bold"
@@ -53,6 +55,7 @@ const Hero = () => {
               paddingBottom={5}
               display="flex"
               alignItems="center"
+              zIndex={100}
               justifyContent="space-between"
             >
               <BsFillHouseFill /> Explore avalaible properties

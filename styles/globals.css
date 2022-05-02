@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -11,6 +12,7 @@ a {
 }
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .hero{
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.65)), url('../assets/images/hero.jpg');
@@ -23,7 +25,9 @@ a {
 }
 .sub-hero{
  margin-top: -35px;
+ /* margin-bottom: 10px; */
 }
+
 .btn{
   margin: 5px 5px;
   background-color: #F5B041;

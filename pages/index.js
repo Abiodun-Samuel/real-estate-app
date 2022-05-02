@@ -42,7 +42,7 @@ export const Banner = ({
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
   return (
-    <Box marginTop={"30px"} marginBottom={"30px"}>
+    <Box marginTop={"30px"} marginBottom={"30px"} width="100%">
       {/* <Banner
         purpose="RENT A HOME"
         title1="Rental Homes for"
