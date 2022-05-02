@@ -52,18 +52,18 @@ export const filterData = [
     placeholder: "Max Price(AED)",
     queryName: "maxPrice",
   },
-  {
-    items: [
-      { name: "Lowest Price", value: "price-asc" },
-      { name: "Highest Price", value: "price-des" },
-      { name: "Newest", value: "date-asc" },
-      { name: "Oldest", value: "date-desc" },
-      { name: "Verified", value: "verified-score" },
-      { name: "City Level Score", value: "city-level-score" },
-    ],
-    placeholder: "Sort",
-    queryName: "sort",
-  },
+  // {
+  //   items: [
+  //     { name: "Lowest Price", value: "price-asc" },
+  //     { name: "Highest Price", value: "price-des" },
+  //     { name: "Newest", value: "date-asc" },
+  //     { name: "Oldest", value: "date-desc" },
+  //     { name: "Verified", value: "verified-score" },
+  //     { name: "City Level Score", value: "city-level-score" },
+  //   ],
+  //   placeholder: "Sort",
+  //   queryName: "sort",
+  // },
   {
     items: [
       { name: "1000", value: "1000" },
