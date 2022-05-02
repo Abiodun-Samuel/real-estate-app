@@ -5,7 +5,6 @@ import { Flex, Box, Text, Icon } from "@chakra-ui/react";
 import { BsFilter } from "react-icons/bs";
 
 import Property from "../components/Property";
-// import SearchFilters from "../components/SearchFilters";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import SearchFilters from "../components/SearchFilters";
 import noresult from "../assets/images/no-result.jpg";
@@ -70,15 +69,15 @@ export async function getServerSideProps({ query }) {
   const locationExternalIDs = query.locationExternalIDs || "5002";
   const categoryExternalID = query.categoryExternalID || "4";
 
-  const data = await fetchApi(
-    `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`
-  );
+  // const data = await fetchApi(
+  //   `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`
+  // );
 
-  return {
-    props: {
-      properties: data?.hits,
-    },
-  };
+  // return {
+  //   props: {
+  //     properties: data?.hits,
+  //   },
+  // };
 }
 
 export default Search;
