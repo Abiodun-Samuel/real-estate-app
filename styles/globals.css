@@ -12,7 +12,6 @@ a {
 }
 * {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 .hero{
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.65)), url('../assets/images/hero.jpg');
