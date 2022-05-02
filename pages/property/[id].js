@@ -26,7 +26,13 @@ const PropertyDetails = ({
     photos,
   },
 }) => (
-  <Box maxWidth="1000px" margin="auto" p="4">
+  <Box
+    maxWidth="1000px"
+    margin="auto"
+    p="4"
+    marginTop={"30px"}
+    marginBottom={"30px"}
+  >
     {photos && <ImageScrollbar data={photos} />}
     <Box w="full" p="6">
       <Flex paddingTop="2" alignItems="center">

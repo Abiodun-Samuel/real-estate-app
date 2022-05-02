@@ -56,7 +56,13 @@ const SearchFilters = () => {
   }, [searchTerm]);
 
   return (
-    <Flex bg="gray.100" p="4" justifyContent="center" flexWrap="wrap">
+    <Flex
+      bg="#ffffff"
+      boxShadow={"xl"}
+      p="3"
+      justifyContent="center"
+      flexWrap="wrap"
+    >
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
           <Select
@@ -65,7 +71,7 @@ const SearchFilters = () => {
             }
             placeholder={filter.placeholder}
             w="fit-content"
-            p="2"
+            p="1"
           >
             {filter?.items?.map((item) => (
               <option value={item.value} key={item.value}>
@@ -75,7 +81,7 @@ const SearchFilters = () => {
           </Select>
         </Box>
       ))}
-      <Flex flexDir="column">
+      {/* <Flex flexDir="column">
         <Button
           onClick={() => setShowLocations(!showLocations)}
           border="1px"
@@ -147,7 +153,7 @@ const SearchFilters = () => {
             )}
           </Flex>
         )}
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 };

@@ -20,6 +20,7 @@ const Navbar = () => (
     borderColor="gray.100"
     alignItems="center"
     justifyContent={"space-between"}
+    boxShadow="2xl"
   >
     <Box fontSize="3xl" color="#F5B041" fontWeight="bold">
       <Link href="/" paddingLeft="2">

@@ -14,11 +14,11 @@ const Search = ({ properties }) => {
   const router = useRouter();
 
   return (
-    <Box>
+    <Box marginTop={"30px"} marginBottom={"30px"}>
       <Flex
         onClick={() => setSearchFilters(!searchFilters)}
         cursor="pointer"
-        bg="gray.100"
+        bg="#f79a03"
         borderBottom="1px"
         borderColor="gray.200"
         p="2"
@@ -27,14 +27,14 @@ const Search = ({ properties }) => {
         justifyContent="center"
         alignItems="center"
       >
-        <Text>Search Property By Filters</Text>
-        <Icon paddingLeft="2" w="7" as={BsFilter} />
+        <Text color={"#ffffff"}>Search Property By Filters</Text>
+        <Icon paddingLeft="2" w="7" as={BsFilter} color={"#ffffff"} />
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize="2xl" p="4" fontWeight="bold">
         Properties {router.query.purpose}
       </Text>
-      <Flex flexWrap="wrap">
+      <Flex justifyContent={"center"} flexWrap={"wrap"}>
         {properties.map((property) => (
           <Property property={property} key={property.id} />
         ))}
@@ -44,10 +44,16 @@ const Search = ({ properties }) => {
           justifyContent="center"
           alignItems="center"
           flexDir="column"
-          marginTop="5"
-          marginBottom="5"
+          marginTop="20px"
+          marginBottom="20px"
         >
-          <Image src={noresult} alt="searcch image" />
+          <Image
+            src={noresult}
+            alt="search image"
+            width={"200px"}
+            height={"200px"}
+            style={{ objectFit: "cover" }}
+          />
           <Text fontSize="xl" marginTop="3">
             No Result Found.
           </Text>
@@ -69,15 +75,15 @@ export async function getServerSideProps({ query }) {
   const locationExternalIDs = query.locationExternalIDs || "5002";
   const categoryExternalID = query.categoryExternalID || "4";
 
-  // const data = await fetchApi(
-  //   `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`
-  // );
+  const data = await fetchApi(
+    `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`
+  );
 
-  // return {
-  //   props: {
-  //     properties: data?.hits,
-  //   },
-  // };
+  return {
+    props: {
+      properties: data?.hits,
+    },
+  };
 }
 
 export default Search;
