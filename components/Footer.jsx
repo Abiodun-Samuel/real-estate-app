@@ -12,7 +12,7 @@ const Footer = () => {
       borderColor="gray.100"
       background="blackAlpha.800"
     >
-      Copyright © {year} Real-Villa, All Rights Reserved. <br />
+      Copyright © {year} Real-Villa App, All Rights Reserved. <br />
       Designed & Developed By{" "}
       <a
         target="_blank"
